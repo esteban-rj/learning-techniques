@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="Turn your notes into lasting knowledge with retrieval practice, the Feynman technique, and spaced repetition. Bring your OpenAI or Gemini key, or try a sample.">
+  <title>Recall — Study with intention</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="sidebar" aria-label="Workspace navigation">
+    <a class="brand" href="#home" aria-label="Recall home"><img src="/favicon.svg" alt="" width="31" height="31"><span>recall<span class="brand-period">.</span></span></a>
+    <div class="workspace-label">A SPACE FOR YOUR MIND</div>
+    <nav aria-label="Main navigation">
+      <p class="nav-label">WORKSPACE</p>
+      <a href="#home" class="nav-item" data-nav="home"><span data-icon="grid"></span>Study space</a>
+      <a href="#library" class="nav-item" data-nav="library"><span data-icon="book"></span>My library<span id="library-count" class="nav-count">0</span></a>
+      <a href="#schedule" class="nav-item" data-nav="schedule"><span data-icon="calendar"></span>Review schedule<span id="due-count" class="nav-count"></span></a>
+      <p class="nav-label learn-label">KEEP LEARNING</p>
+      <a href="#resources" class="nav-item" data-nav="resources"><span data-icon="leaf"></span>Techniques & sources</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="grow-note"><svg viewBox="0 0 130 90" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M64 81V36M64 63C33 64 31 40 34 35c23 0 31 15 30 28ZM64 47C65 20 86 15 94 19c1 18-13 29-30 28ZM46 81h37M52 86h25"/><path d="M42 44l21 18M85 27L65 46"/></g><path d="M32 23l1-9m-6 5 10-1M103 45v-8m-4 4h8" stroke="currentColor" stroke-width="1.3"/></svg><p>Small steps.<br><em>Stronger connections.</em></p></div>
+      <button class="connection-button" data-action="settings"><span class="connection-dot"></span><span><strong id="connection-label">Connect your AI</strong><small id="connection-detail">OpenAI or Gemini</small></span><span data-icon="chevron-right"></span></button>
+      <span class="sidebar-foot">A little more curious, every day.</span>
+    </div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><div class="breadcrumb"><span>My workspace</span><span>/</span><strong id="page-label">Study space</strong></div><div class="topbar-right"><span id="today"></span><button class="icon-button" data-action="settings" aria-label="Open AI settings"><span data-icon="sliders"></span></button><span class="avatar" aria-label="Personal workspace">Y</span></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="app-footer"><span><span data-icon="lock"></span>Your progress stays on this device.</span><a href="#resources">Thoughtfully built on learning science <span aria-hidden="true">↗</span></a></footer>
+  </div>
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <form id="settings-form">
+      <div class="dialog-top"><span class="eyebrow">MAKE IT YOURS</span><button type="button" class="icon-button" data-close="settings-dialog" aria-label="Close AI settings"><span data-icon="x"></span></button></div>
+      <h2 id="settings-title">A little help from AI.</h2><p class="muted">Connect a provider to create practice questions from your notes.</p>
+      <fieldset class="provider-field"><legend>Choose your provider</legend><div class="provider-options"><label><input type="radio" name="provider" value="openai" checked><span><span data-icon="sparkles"></span>OpenAI</span></label><label><input type="radio" name="provider" value="gemini"><span><span data-icon="sparkles"></span>Gemini</span></label></div></fieldset>
+      <label for="api-key">API key</label><div class="key-input"><input id="api-key" name="apiKey" type="password" placeholder="Paste your API key" autocomplete="off" spellcheck="false" required maxlength="512"><button type="button" class="icon-button" id="toggle-key" aria-label="Show API key"><span data-icon="eye"></span></button></div>
+      <p class="input-hint">Get a key from <a id="key-link" href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">OpenAI <span aria-hidden="true">↗</span></a>. Provider usage is billed to your account.</p>
+      <details class="advanced"><summary>Advanced settings</summary><label for="model-id">Model ID</label><input id="model-id" name="model" type="text" value="gpt-5-mini" pattern="[a-zA-Z0-9._-]{1,100}" maxlength="100" required><p class="input-hint">Use a model that supports structured JSON output.</p></details>
+      <div class="privacy-note"><span data-icon="shield"></span><p>Your key stays in this tab’s memory and is sent through this app’s server only to your chosen provider. It is never saved to disk. Your notes are shared with that provider when you use AI.</p></div>
+      <p id="settings-error" class="form-error" role="alert"></p><div class="dialog-actions"><button type="button" class="text-button" id="disconnect">Disconnect</button><button class="button primary" type="submit">Save connection<span data-icon="arrow-right"></span></button></div>
+    </form>
+  </dialog>
+  <dialog id="session-dialog" class="session-dialog" aria-labelledby="session-title">
+    <form id="session-form">
+      <div class="dialog-top"><span class="eyebrow">PLANT A NEW IDEA</span><button type="button" class="icon-button" data-close="session-dialog" aria-label="Close new session"><span data-icon="x"></span></button></div>
+      <h2 id="session-title">What are we learning?</h2><p class="muted">Bring your notes. We’ll help you put them into practice.</p>
+      <label for="session-method">Study technique</label><select id="session-method" name="method"><option value="retrieval">Retrieval practice · Recall it</option><option value="feynman">Feynman technique · Explain it</option><option value="spaced">Spaced repetition · Revisit it</option></select>
+      <label for="session-topic">Give it a name <span class="optional">(optional)</span></label><input id="session-topic" name="topic" placeholder="e.g. Introduction to cognitive psychology" maxlength="100">
+      <div class="label-row"><label for="study-notes">Your study notes</label><label class="upload-label" for="notes-file"><span data-icon="upload"></span>Import .txt / .md</label><input class="visually-hidden" type="file" id="notes-file" accept=".txt,.md,text/plain,text/markdown"></div>
+      <textarea id="study-notes" name="notes" placeholder="Paste a passage, your lecture notes, or a chapter summary here…" minlength="80" maxlength="30000" rows="7" required></textarea><div class="notes-meta"><span>80–30,000 characters</span><span id="character-count">0 / 30,000</span></div>
+      <p class="input-hint" id="session-provider-hint"></p><button type="button" class="text-button connect-inline" id="session-connect" data-action="settings">Connect your AI<span data-icon="arrow-up-right"></span></button><p id="session-error" class="form-error" role="alert"></p>
+      <div class="dialog-actions"><button type="button" class="text-button" data-action="sample">Try sample notes</button><button class="button primary" type="submit" id="generate-button">Create study session<span data-icon="sparkles"></span></button></div>
+    </form>
+  </dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-top"><span class="eyebrow">LIBRARY</span><button class="icon-button" data-close="confirm-dialog" aria-label="Cancel deletion"><span data-icon="x"></span></button></div><h2 id="confirm-title">Delete this study set?</h2><p class="muted">The notes, cards, and review schedule for this set will be removed from this device.</p><div class="dialog-actions"><button class="button secondary" data-close="confirm-dialog">Keep it</button><button class="button primary" id="confirm-delete">Delete study set</button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">Recall needs JavaScript to run study sessions. Please enable it in your browser.</p></noscript>
+</body>
+</html>

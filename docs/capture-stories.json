@@ -1,0 +1,56 @@
+{
+  "capturedOn": "2026-11-16",
+  "source": "Real local Recall browser sessions using demonstration notes and no API keys",
+  "viewport": { "width": 1280, "height": 960 },
+  "outputWidth": 1000,
+  "stories": [
+    {
+      "id": "retrieval-practice",
+      "directory": "retrieval",
+      "frames": [
+        { "name": "00-home", "seconds": 2 },
+        { "name": "01-question", "seconds": 2.5 },
+        { "name": "02-answer", "seconds": 2.5 },
+        { "name": "03-reference", "seconds": 3.5 },
+        { "name": "04-progress", "seconds": 1.5 },
+        { "name": "05-complete", "seconds": 2.5 },
+        { "name": "06-schedule", "seconds": 3 }
+      ]
+    },
+    {
+      "id": "feynman-technique",
+      "directory": "feynman",
+      "frames": [
+        { "name": "00-create", "seconds": 2.5 },
+        { "name": "01-read", "seconds": 3 },
+        { "name": "02-explain", "seconds": 2 },
+        { "name": "03-written", "seconds": 3 },
+        { "name": "04-reflect", "seconds": 3 },
+        { "name": "05-refined", "seconds": 3 },
+        { "name": "06-saved", "seconds": 2.5 }
+      ]
+    },
+    {
+      "id": "ai-settings",
+      "directory": "settings",
+      "frames": [
+        { "name": "00-openai", "seconds": 3 },
+        { "name": "01-model", "seconds": 3 },
+        { "name": "02-gemini", "seconds": 3.5 },
+        { "name": "03-openai-model", "seconds": 2.5 }
+      ]
+    },
+    {
+      "id": "library-and-sources",
+      "directory": "tour",
+      "frames": [
+        { "name": "00-library", "seconds": 2.5 },
+        { "name": "01-filter", "seconds": 2 },
+        { "name": "02-schedule", "seconds": 3 },
+        { "name": "03-sources", "seconds": 2.5 },
+        { "name": "04-guide", "seconds": 3 },
+        { "name": "05-search", "seconds": 3 }
+      ]
+    }
+  ]
+}

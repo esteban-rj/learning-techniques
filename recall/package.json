@@ -1,0 +1,8 @@
+{
+  "name": "recall-study-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": { "dev": "node --watch server/index.js", "start": "node server/index.js", "build": "node scripts/build.js", "test": "node --test test/*.test.js" }
+}

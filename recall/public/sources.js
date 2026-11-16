@@ -1,0 +1,31 @@
+export const MAIN_SOURCE = 'https://www.usa.edu/blog/study-techniques/';
+export const SOURCES = [
+  ['Better sleep habits lead to better college grades', 'ScienceDaily · 2019', 'https://www.sciencedaily.com/releases/2019/10/191001083956.htm', 'Sleep & learning'],
+  ['How Our Environment Affects What We Remember', 'Neuroscience News · 2022', 'https://neurosciencenews.com/environment-memory-20165/', 'Study environment'],
+  ['Top 10 Healthy Snacks for Studying', 'brainMD · 2018', 'https://brainmd.com/blog/top-10-healthy-snacks-for-studying', 'Study preparation'],
+  ['SQ3R: Survey–Question–Read–Recite–Review', 'AdLit', 'https://www.adlit.org/in-the-classroom/strategies/sq3r-survey-question-read-recite-review', 'SQ3R'],
+  ['What is retrieval practice?', 'Retrieval Practice · Pooja K. Agarwal', 'https://www.retrievalpractice.org/why-it-works', 'Retrieval practice'],
+  ['Evidence of the Spacing Effect and Influences on Perceptions of Learning and Science Curricula', 'Xuechen Yuan · Cureus · 2022', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8759977/', 'Spaced practice'],
+  ['Enhancing Your Study Habits with PQ4R', 'Paul Holt · e-student.org · 2023', 'https://e-student.org/pq4r-study-method/', 'PQ4R'],
+  ['The Feynman Technique', 'Sahil Bloom · The Curiosity Chronicle', 'https://www.sahilbloom.com/newsletter/the-feynman-technique', 'Feynman technique'],
+  ['Using the Leitner System to improve your study', 'Jesse Whelan · Medium · 2019', 'https://jessewhelan.medium.com/using-the-leitner-system-to-improve-your-study-d5edafae7f0', 'Leitner system'],
+  ['Exploring EEG Effective Connectivity Network in Estimating Influence of Color on Emotion and Memory', 'Chai, Amin, Izhar et al. · Frontiers · 2019', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6794354/', 'Color-coded notes'],
+  ['Mind Mapping Training’s Effects on Reading Ability: Detection Based on Eye Tracking Sensors', 'Ting Liu & Takaya Yuizono · Sensors · 2020', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7472315/', 'Mind mapping'],
+  ['Collaborative Mind Mapping', 'MindMeister', 'https://www.mindmeister.com/', 'Mind mapping tool'],
+  ['Health Benefits of Exercise', 'WebMD · as cited by USAHS', 'https://www.webmd.com/diet/news/20061103/exercise-fights-fatigue-boosts-energy', 'Exercise'],
+  ['How Exercise Can Help Boost Your Memory', 'Cleveland Clinic · 2024', 'https://health.clevelandclinic.org/exercise-to-boost-memory', 'Exercise & memory'],
+  ['Benefits of Exercise', 'MedlinePlus', 'https://medlineplus.gov/benefitsofexercise.html', 'Exercise'],
+  ['Can you learn in your sleep? Yes, and here’s how', 'Ana Sandoiu · Medical News Today · 2018', 'https://www.medicalnewstoday.com/articles/321161', 'Sleep & memory'],
+];
+export const TECHNIQUES = [
+  ['SQ3R', 'Survey the material, ask questions, read for answers, recite from memory, then review.', 3],
+  ['Retrieval practice', 'Try to bring an answer to mind before checking the source. Compare and correct after the attempt.', 4],
+  ['Spaced practice', 'Spread practice across days and weeks. Return to what you have learned instead of fitting it into one sitting.', 5],
+  ['PQ4R', 'Preview, question, read, reflect, recite, and review: a structured way to work through a reading.', 6],
+  ['Feynman technique', 'Explain a concept in everyday language, find gaps, return to the source, and refine your explanation.', 7],
+  ['Leitner system', 'Use flashcard boxes to give difficult material more frequent practice and familiar material longer intervals.', 8],
+  ['Color-coded notes', 'Use a restrained color key to organize concepts and make important ideas easier to locate.', 9],
+  ['Mind mapping', 'Place the topic at the center, branch into main ideas, and connect related details.', 10],
+  ['Exercise before studying', 'Consider a walk or some movement as part of getting ready for a focused study session.', 13],
+  ['Study before bed', 'Plan a short review before a normal night of sleep, and revisit the material the next morning.', 15],
+];

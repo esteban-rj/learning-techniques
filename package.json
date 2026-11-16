@@ -1,0 +1,5 @@
+{
+  "name": "learning-techniques",
+  "private": true,
+  "scripts": { "dev": "npm --prefix recall run dev", "start": "npm --prefix recall start", "test": "npm --prefix recall test", "build": "npm --prefix recall run build" }
+}
